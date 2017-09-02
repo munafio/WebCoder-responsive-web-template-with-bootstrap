@@ -1,0 +1,326 @@
+<html lang="en"><head>
+  <title>WebCoder - Learn to code</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/css.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="icon" type="icon/ico" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="js/javascript.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="#">WebCoder</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html" data-toggle="tooltip" data-placement="bottom" title="" id="focus" data-original-title="Home Page">Home</a></li>
+      <li><a href="books.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Free books about Web Develpment">Books</a></li> 
+      <li><a href="o-s-p.html" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Free open source projects about Web Develpment">Open source projects</a></li> 
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+    <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Create an account for free"><a href="#" data-toggle="modal" data-target="#btnsignup">Sign Up</a></li>
+      <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Log in to webcoder"><a href="#" data-toggle="modal" data-target="#btnlogin" style="border-right: 1px solid #DADADA;border-left: 1px solid #DADADA;margin-right: 10px">Log in</a></li>
+      <li data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Designer : Munaf Aqeel Mahdi"><a data-toggle="modal" data-target="#btndesigner" style="width: 50px;height: 50px;background: url('images/designer.jpg') no-repeat;background-size: cover;border-radius: 40px;" href="#"></a></li>
+    </ul>
+  </div>
+</div></nav>
+<!-- ============================= login dialog ============================= -->
+<div id="btnlogin" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #EA503F;color: white;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">Log in</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        </p><form role="form">
+  <div class="form-group">
+  	<label>Email Address<label style="color: red">&nbsp;*</label></label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+  </div>
+  <div class="form-group">
+  	<label>Password<label style="color: red">&nbsp;*</label></label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter your password">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn-flat-red">Log in</button>
+</form>
+       <p></p>
+      </div>
+      <div class="modal-footer">
+      	<label style="float: left">
+      		<a href="#" data-toggle="modal" data-target="#btnsignup" data-dismiss="modal">Create an account</a>
+      		<label>&nbsp;|&nbsp;</label><a href="#" data-toggle="modal" data-target="#btnforget" data-dismiss="modal">Forgot Your Password?</a>
+      		</label>
+        <button type="button" class="btn-flat-red" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ============================= Forgot passsword dialog ============================= -->
+<div id="btnforget" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #EA503F;color: white;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">Forgot Passsword!</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        </p><form role="form">
+  <div class="form-group">
+  	<label>Email Address</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+  </div>
+  <a href="#" data-toggle="modal" data-target="#btncomfirm" data-dismiss="modal" class="btn-flat-red">Submit</a>
+</form>
+       <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-flat-red" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ============================= comfirm dialog ============================= -->
+<div id="btncomfirm" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #EA503F;color: white;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">Comfirm</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        	Please check your E-Mail and comfirm your account from link in the message we sent!<br>
+        	Link Expired in 15 min.
+       </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-flat-red" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ============================= sign up dialog ============================= -->
+<div id="btnsignup" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: #3F8CEA;color: white;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">Sign up</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+        </p><form role="form">
+        	<h3>Get started with a free account</h3>
+        	<div class="form-group">
+        		<label>Username<label style="color: red">&nbsp;*</label></label>
+  <input type="text" class="form-control" id="usr" placeholder="Username" style="width: 40%">
+</div>
+  <div class="form-group">
+  	<label>Email Address<label style="color: red">&nbsp;*</label></label>
+    <input type="email" class="form-control" id="email" placeholder="Email Address" style="width: 70%">
+  </div>
+  <div class="form-group">
+  	<label>Password<label style="color: red">&nbsp;*</label></label>
+    <input type="password" class="form-control" id="pwd" placeholder="Enter password" style="width: 70%">
+  </div>
+<div class="form-group" style="display: inline-block">
+  <label for="sel1">Birthday</label>
+  <select class="form-control" id="sel1">
+    <option>January</option>
+    <option>Febuary</option>
+    <option>March</option>
+    <option>April</option>
+    <option>May</option>
+    <option>June</option>
+    <option>July</option>
+    <option>August</option>
+    <option>September</option>
+    <option>October</option>
+    <option>November</option>
+    <option>December</option>
+  </select>
+</div>
+<div class="form-group" style="display: inline-block">
+  <input type="text" class="form-control" id="usr" placeholder="Day" style="width: 20%;display: inline-block">
+  <input type="text" class="form-control" id="usr" placeholder="Year" style="width: 20%;display: inline-block">
+</div>
+  <div class="radio">
+  <label><input type="radio" name="optradio">Male</label>
+  <label><input type="radio" name="optradio">Famale</label>
+</div>
+<div class="checkbox">
+  <label><input type="checkbox" value="">I agree and accept to WebCoder's terms &amp; conditions and privacy policy.</label>
+</div>
+  <button type="submit" class="btn-flat-blue">Sign up</button>
+</form>
+       <p></p>
+      </div>
+      <div class="modal-footer">
+      	<label style="float: left">Already have a webcoder account?<a href="#" data-toggle="modal" data-target="#btnlogin" data-dismiss="modal"> Log in here</a></label>
+        <button type="button" class="btn-flat-blue" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- ============================= Designer dialog en ============================= -->
+<div id="btndesigner" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: rgb(21, 185, 106);color: #ffffff;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">About The Designer</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+	<div style="padding: 20px;text-align: center;
+    display: inline-block;
+    width: auto;
+    max-width: 300px;
+    min-width: 172px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.4s;">
+	<p align="center" style="background: url('images/designer.jpg') no-repeat;background-size: cover;width: 200px;height: 200px;    display: -webkit-inline-box;border-radius: 100px 100px 100px 100px;"></p>
+    <h4 align="center">
+    	Munaf Aqeel Mahdi
+    </h4>
+    <p align="center">
+    	From Iraq-babil,Student in 5th preparatory.<br>
+    	I work as Web developer and programmer and Security Researcher, I built alot of projects in html-css-js-jq-php-bs, and i uploaded it on the internet for free to all other developers
+    	</p><h4>My Last Projects:</h4>
+    	<a href="http://up.top4top.net/downloadf-top4top_b518cd4ed21-rar.html">Proguide - Programmer Guide</a><br>
+    	<a href="http://www.outooy.ky-re.com/">Outooy | Smart Engine</a>
+    	<h4>You can download it for free</h4><hr>
+    	<a href="https://www.facebook.com/manaf.almamori.1">My account on facebook</a><br>
+    	<a href="https://www.facebook.com/groups/find.your.problem.here/">My group of programmers and developers on facebook</a>
+    <p></p>
+</div>
+       </div>
+      </div>
+      <div class="modal-footer">
+      	<label style="float: left">Language : English |<a href="#" data-toggle="modal" data-target="#btndesignerar" data-dismiss="modal"> عربي</a></label>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================= Designer dialog ar ============================= -->
+<div id="btndesignerar" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background: rgb(21, 185, 106);color: #ffffff;">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">عن المصمم</h4>
+      </div>
+      <div class="modal-body">
+        <div align="center">
+	<div style="padding: 20px;text-align: center;
+    display: inline-block;
+    width: auto;
+    max-width: 300px;
+    min-width: 172px;
+    text-align: center;
+    padding: 15px;
+    transition: all 0.4s;">
+	<p align="center" style="background: url('images/designer.jpg') no-repeat;background-size: cover;width: 200px;height: 200px;    display: -webkit-inline-box;border-radius: 100px 100px 100px 100px;"></p>
+    <h4 align="center">
+    	مناف عقيل مهدي
+    </h4>
+    <p align="center">
+    	من العراق-بابل ,طالب في الصف الخامس اعدادي.<br>
+    	انا اعمل كمبرمج ومطور ويب وباحث امني ,أنشأت العديد من المشاريع في <br>
+    	html-css-js-jq-php-bs
+    	<br>
+    	ورفعتها على الانترنت مجانا لجميع المبرمجين
+    	
+    	</p><h4>آخر مشاريعي</h4>
+    	<a href="http://up.top4top.net/downloadf-top4top_b518cd4ed21-rar.html">Proguide - Programmer Guide</a><br>
+    	<a href="http://www.outooy.ky-re.com/">Outooy | Smart Engine</a>
+    	<h4>تستطيع تحميلها مجانا</h4><hr>
+    	<a href="https://www.facebook.com/manaf.almamori.1">حسابي على الفيسبوك</a><br>
+    	<a href="https://www.facebook.com/groups/find.your.problem.here/">مجموعتي على الفيسبوك للمبرمجين والمطورين</a>
+    <p></p>
+</div>
+       </div>
+      </div>
+      <div class="modal-footer">
+      	<label style="float: left">Language : <a href="#" data-toggle="modal" data-target="#btndesigner" data-dismiss="modal">English</a> | عربي</label>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ============================= site section1 ============================= -->
+<div class="section1" style="background: url('images/home-bg.jpg');background-size: cover;background-repeat: no-repeat;">
+	<p class="section1-txt">WebCoder give you books and open source projects about Web Development for free.</p>
+	<div align="center"><input type="text" class="main-search-box" value="Search in WebCoder..." onblur="if(this.value=='')this.value=this.defaultValue;" onfocus="if(this.value==this.defaultValue)this.value=''"></div>
+</div>
+<!-- ============================= site section 2 ============================= -->
+&lt;<div class="for-section2">
+<div class="section2" align="center">
+	<p align="center">
+</p><h1 align="center" style="
+    font-size: 100px;
+    text-shadow: 1px 1px 10px #000000;
+    color: white;
+">
+401
+</h1>
+<h1 align="center" style="
+    padding: 40px;
+    background: #E2E2E2;
+    border: 1px solid #BBB;
+    border-radius: 2px 2px 2px 2px;
+">Ops! Authorization required,<a href="index.html"> back home</a></h1>	<p></p>
+        	
+	
+</div><p></p>
+</div>
+<!-- ============================= site footer ============================= -->
+<div class="footer">
+	<p style="display: inherit;float: left;">Copyright © All rights reserved, WebCoder 2016</p>
+	<table style="float: right">
+  <tbody><tr>
+   <td><a class="vimeo social" href="#"></a></td>
+   <td><a class="youtube social" href="#"></a></td>
+   <td><a class="twitter2 social" href="#"></a></td>
+   <td><a class="dribbble social" href="#"></a></td>
+   <td><a class="facebook2 social" href="#"></a></td>
+   <td><a class="linkedin social" href="#"></a></td>
+  </tr></tbody></table>
+    </div>
+<script src="js/imgbox.js"></script>
+
+
+</body></html>
